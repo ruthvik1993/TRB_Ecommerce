@@ -1,0 +1,63 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/relativeHeader"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/relLayHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:background="@drawable/ripple_green"
+        android:paddingBottom="15dp"
+        android:paddingLeft="15dp"
+        android:paddingTop="15dp">
+
+        <ImageView
+            android:id="@+id/imgHome"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/home_icon" />
+
+        <com.thericebag.application.application.views.TextView_RobotoMedium
+            android:id="@+id/textUsername"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@+id/imgHome"
+            android:text="Home"
+            android:textColor="#FFFFFF"
+            android:textSize="14dp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeAllproducts"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relLayHeader"
+        android:background="@drawable/ripple"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/img_navig"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/navigation_all_products" />
+
+        <com.thericebag.application.application.views.TextView_RobotoRegular
+            android:id="@+id/txtProducts"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@+id/img_navig"
+            android:drawablePadding="10dp"
+            android:drawableRight="@drawable/navigation_dropddown"
+            android:text="All Products"
+            android:textSize="15dp" />
+
+    </RelativeLayout>
+</RelativeLayout>

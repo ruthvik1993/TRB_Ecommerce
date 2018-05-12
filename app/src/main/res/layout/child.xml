@@ -1,0 +1,96 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="2dp"
+        android:layout_marginLeft="6dp"
+        android:layout_marginRight="6dp"
+        android:focusableInTouchMode="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        card_view:cardElevation="3dp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:padding="5dp">
+
+            <RelativeLayout
+                android:id="@+id/relativeImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#fbfbfb"
+                android:padding="2dp">
+
+                <ImageView
+                    android:id="@+id/imgPic"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_centerInParent="true"
+                     />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relativeDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@+id/relativeImage"
+                android:layout_below="@+id/relativeImage"
+                android:background="#FFFFFF">
+
+                <com.thericebag.application.application.views.TextView_RobotoRegular
+                    android:id="@+id/txtProduct"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:paddingLeft="2dp"
+                    android:paddingRight="2dp"
+                    android:text="Rolling Rice"
+                    android:textColor="#696969"
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:id="@+id/txtOurPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/txtProduct"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/bg_round_yellow"
+                    android:paddingBottom="2dp"
+                    android:paddingLeft="4dp"
+                    android:paddingRight="4dp"
+                    android:paddingTop="2dp"
+                    android:text="₹ 1000"
+                    android:textColor="@color/white"
+                    android:textSize="10dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txtMrkPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/txtOurPrice"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignTop="@+id/txtOurPrice"
+                    android:layout_below="@+id/txtProduct"
+                    android:layout_marginRight="4dp"
+                    android:background="@drawable/strikebackground"
+                    android:gravity="center_vertical"
+                    android:text="₹1100"
+                    android:textColor="#b1b1b1"
+                    android:textSize="10dp" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+</RelativeLayout>

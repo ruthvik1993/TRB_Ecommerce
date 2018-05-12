@@ -1,0 +1,481 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F3F3F3"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/relativeHeader"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="#5cba5c">
+
+        <ImageView
+            android:id="@+id/backIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:padding="15dp"
+            android:src="@drawable/header_back_arrow" />
+
+        <com.thericebag.application.application.views.TextView_RobotoRegular
+            android:id="@+id/txtOrderSummary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/backIcon"
+            android:text="Profile"
+            android:textColor="#ffffff"
+            android:textSize="16dp" />
+
+        <ImageView
+            android:id="@+id/imgCall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:padding="10dp"
+            android:src="@drawable/edit_profile_icon"
+            android:visibility="gone" />
+
+        <View
+            android:id="@+id/viewHeader"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="#A9A9A9" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/scroll_body"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:id="@+id/Linear_Profileheader"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#F3F3F3"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/card_view_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                card_view:cardElevation="3dp">
+
+                <RelativeLayout
+                    android:id="@+id/relative_Profileheader"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#FFFFFF"
+                    android:padding="20dp">
+
+                    <com.thericebag.application.application.views.TextView_RobotoMedium
+                        android:id="@+id/textView_UserName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="#6a6a6a"
+                        android:textSize="16dp" />
+
+
+                    <com.thericebag.application.application.views.TextView_RobotoRegular
+                        android:id="@+id/textView_mobile"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/textView_UserName"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginTop="10dp"
+                        android:drawableLeft="@drawable/phone_icon"
+                        android:drawablePadding="8dp"
+                        android:text=""
+                        android:textColor="#9f9f9f"
+                        android:textSize="11dp" />
+
+                    <com.thericebag.application.application.views.TextView_RobotoRegular
+                        android:id="@+id/textView_email"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/textView_mobile"
+                        android:drawableLeft="@drawable/mail_icon"
+                        android:drawablePadding="7dp"
+                        android:text=""
+                        android:textColor="#9f9f9f"
+                        android:textSize="11dp" />
+
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/card_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:layout_marginRight="6dp"
+                android:layout_marginTop="10dp"
+                card_view:cardElevation="3dp">
+
+
+                <RelativeLayout
+                    android:id="@+id/relativeNoOrders"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#FFFFFF"
+                    android:padding="8dp"
+                    android:visibility="gone">
+
+                    <com.thericebag.application.application.views.TextView_RobotoBold
+                        android:id="@+id/txtMyOrdersInNoOrders"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:text="My Orders"
+                        android:textColor="#656565"
+                        android:textSize="13dp" />
+
+                    <com.thericebag.application.application.views.TextView_RobotoMedium
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txtMyOrdersInNoOrders"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:text="No Previous Orders"
+                        android:textColor="#656565" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/relative_Orders"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#FFFFFF"
+
+                    android:visibility="visible">
+
+                    <com.thericebag.application.application.views.TextView_RobotoBold
+                        android:id="@+id/textView_yourOrders"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:padding="5dp"
+                        android:text="My Orders"
+                        android:textColor="#656565"
+                        android:textSize="13dp" />
+
+                    <RelativeLayout
+                        android:id="@+id/relativeMyOrder"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/textView_yourOrders"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/layout_border_card"
+                        android:padding="9dp">
+
+                        <RelativeLayout
+                            android:id="@+id/relativeOrderNumber"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="#fbfbfb"
+                            android:padding="5dp">
+
+                            <com.thericebag.application.application.views.TextView_RobotoRegular
+                                android:id="@+id/txtOrder"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Order No:"
+                                android:textColor="#919191"
+                                android:textSize="12dp" />
+
+                            <com.thericebag.application.application.views.TextView_RobotoMedium
+                                android:id="@+id/txtOrderNumber"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_toRightOf="@+id/txtOrder"
+                                android:text=""
+                                android:textColor="#696969"
+                                android:textSize="12dp" />
+
+                            <com.thericebag.application.application.views.TextView_RobotoRegular
+                                android:id="@+id/txtOrderDate"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/txtOrder"
+                                android:layout_marginTop="3dp"
+                                android:drawableLeft="@drawable/calendar_icon"
+                                android:drawablePadding="8dp"
+                                android:text=""
+                                android:textColor="#b9b9b9"
+                                android:textSize="11dp" />
+
+
+                            <com.thericebag.application.application.views.TextView_RobotoMedium
+                                android:id="@+id/txtStatus"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:text=""
+                                android:textColor="#e67442"
+                                android:textSize="12dp" />
+                        </RelativeLayout>
+
+
+                        <LinearLayout
+                            android:id="@+id/linearProductDetails"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/relativeOrderNumber"
+                            android:orientation="horizontal"
+                            android:padding="5dp">
+
+                            <RelativeLayout
+                                android:id="@+id/relativeImage"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/cart_item_image_border"
+                                android:padding="10dp">
+
+                                <ImageView
+                                    android:id="@+id/capturedImage"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/ricebag_yourorders" />
+                            </RelativeLayout>
+
+                            <LinearLayout
+                                android:id="@+id/relativeDescription"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="10dp"
+                                android:orientation="vertical">
+
+                                <com.thericebag.application.application.views.TextView_RobotoRegular
+                                    android:id="@+id/txtProductTitle"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text=""
+                                    android:textColor="#696969"
+                                    android:textSize="14dp" />
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp">
+
+                                    <com.thericebag.application.application.views.TextView_RobotoBold
+                                        android:id="@+id/txtPurchasePrice"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginTop="5dp"
+                                        android:text=""
+                                        android:textColor="#5cba5c"
+                                        android:textSize="14dp" />
+
+                                    <com.thericebag.application.application.views.TextView_RobotoRegular
+                                        android:id="@+id/textQty"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentRight="true"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginRight="5dp"
+                                        android:text=""
+                                        android:textColor="#8b8a8a"
+                                        android:textSize="11dp" />
+
+                                    <com.thericebag.application.application.views.TextView_RobotoRegular
+                                        android:id="@+id/textQtytext"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginRight="5dp"
+                                        android:layout_toLeftOf="@+id/textQty"
+                                        android:text="Qty:"
+                                        android:textColor="#606060"
+                                        android:textSize="11dp" />
+
+                                </RelativeLayout>
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0.5dp"
+                                    android:layout_marginTop="10dp"
+                                    android:background="#dddddd" />
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp">
+
+                                    <com.thericebag.application.application.views.TextView_RobotoRegular
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:text="Payment Type"
+                                        android:textColor="#8b8a8a"
+                                        android:textSize="11dp" />
+
+                                    <com.thericebag.application.application.views.TextView_RobotoRegular
+                                        android:id="@+id/txtCardType"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentRight="true"
+                                        android:text=""
+                                        android:textColor="#5e5e5e"
+                                        android:textSize="11dp" />
+                                </RelativeLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <com.thericebag.application.application.views.TextView_RobotoMedium
+                        android:id="@+id/txtViewAll"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/relativeMyOrder"
+                        android:background="@drawable/ripple"
+                        android:gravity="center_horizontal"
+                        android:padding="8dp"
+                        android:paddingTop="10dp"
+                        android:text="VIEW ALL"
+                        android:textColor="#838383"
+                        android:textSize="11dp" />
+
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/card_view_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="6dp"
+                android:layout_marginRight="6dp"
+                android:layout_marginTop="10dp"
+                card_view:cardElevation="3dp">
+
+                <RelativeLayout
+                    android:id="@+id/relative_yourAddresses"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/relative_Orders"
+                    android:layout_marginTop="5dp"
+                    android:background="#FFFFFF">
+
+                    <com.thericebag.application.application.views.TextView_RobotoBold
+                        android:id="@+id/textView_yourAddresses"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="10dp"
+                        android:text="My Addresses"
+                        android:textColor="#656565"
+                        android:textSize="13dp" />
+
+                    <RelativeLayout
+                        android:id="@+id/relative_addressBody"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/textView_yourAddresses"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/layout_border_card"
+                        android:padding="8dp">
+
+                        <ImageView
+                            android:id="@+id/imgLocateIcon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:src="@drawable/locate_address" />
+
+                        <com.thericebag.application.application.views.TextView_RobotoRegular
+                            android:id="@+id/txtName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@+id/imgLocateIcon"
+                            android:layout_alignTop="@+id/imgLocateIcon"
+                            android:layout_marginLeft="10dp"
+                            android:layout_toRightOf="@+id/imgLocateIcon"
+                            android:gravity="center_vertical"
+                            android:textColor="#6f6f6f"
+                            android:textSize="14dp" />
+
+                        <com.thericebag.application.application.views.TextView_RobotoRegular
+                            android:id="@+id/txtAddress1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignLeft="@+id/txtName"
+                            android:layout_below="@+id/txtName"
+                            android:layout_marginTop="5dp"
+                            android:layout_toRightOf="@+id/imgLocateIcon"
+                            android:lineSpacingExtra="5dp"
+                            android:text=""
+                            android:textColor="#8b8a8a"
+                            android:textSize="12dp" />
+
+                    </RelativeLayout>
+
+                    <com.thericebag.application.application.views.TextView_RobotoMedium
+                        android:id="@+id/textView_viewAllAddresses"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/relative_addressBody"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/ripple"
+                        android:gravity="center"
+                        android:padding="8dp"
+                        android:paddingTop="5dp"
+                        android:text="VIEW ALL"
+                        android:textColor="#838383"
+                        android:textSize="11dp" />
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/relativeAddAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textView_yourAddresses"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_horizontal"
+                    android:padding="10dp"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/imgAdd"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/plus_icon_address" />
+
+                    <TextView
+                        android:id="@+id/txtAddText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/imgAdd"
+                        android:layout_centerHorizontal="true"
+                        android:text="Add address"
+                        android:textColor="#666666" />
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

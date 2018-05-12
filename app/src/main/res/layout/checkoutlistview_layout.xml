@@ -1,0 +1,240 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/relativeProductCard"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view_product"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:focusableInTouchMode="true"
+        android:padding="10dp"
+        android:visibility="visible"
+        card_view:cardElevation="1dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/capturedImage"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:scaleType="fitXY"
+
+                android:src="@drawable/ricebag_sample" />
+
+            <RelativeLayout
+                android:id="@+id/relativeDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="5dp"
+                android:layout_toRightOf="@+id/capturedImage"
+                android:orientation="vertical">
+
+                <com.thericebag.application.application.views.TextView_RobotoRegular
+                    android:id="@+id/txtProductTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_toLeftOf="@+id/imgClose"
+                    android:gravity="left"
+                    android:text="Kurnool Sona 1year old"
+                    android:textColor="#696969"
+                    android:textSize="14dp" />
+
+                <ImageView
+                    android:id="@+id/imgClose"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:padding="10dp"
+                    android:src="@drawable/cart_delete_item" />
+
+                <com.thericebag.application.application.views.TextView_RobotoRegular
+                    android:id="@+id/txtWeight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtProductTitle"
+                    android:layout_marginTop="5dp"
+                    android:text="Weight: 15kgs"
+                    android:textColor="#8b8a8a"
+                    android:textSize="10dp" />
+
+                <View
+                    android:id="@+id/viewLine1"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_below="@+id/txtWeight"
+                    android:layout_marginTop="10dp"
+                    android:background="#eeeeee" />
+
+
+                <com.thericebag.application.application.views.TextView_RobotoBold
+                    android:id="@+id/txtOurPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/viewLine1"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="5dp"
+                    android:text="₹1000"
+                    android:textColor="#5cba5c"
+                    android:textSize="14dp" />
+
+                <ImageView
+                    android:id="@+id/imgUp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/viewLine1"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="2dp"
+                    android:padding="10dp"
+                    android:src="@drawable/cart_add_quantity"
+                    android:textColor="#666666" />
+
+                <com.thericebag.application.application.views.TextView_RobotoRegular
+                    android:id="@+id/txtNumberOfItems"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/txtOurPrice"
+                    android:layout_below="@+id/viewLine1"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_toLeftOf="@+id/imgUp"
+                    android:text="2"
+                    android:textColor="#656565"
+                    android:textSize="16dp" />
+
+                <ImageView
+                    android:id="@+id/imgDown"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/viewLine1"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_toLeftOf="@+id/txtNumberOfItems"
+                    android:padding="10dp"
+                    android:src="@drawable/cart_decrease_quantity"
+                    android:textColor="#dcdcdc" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view_offer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:focusableInTouchMode="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:padding="10dp"
+        android:visibility="gone"
+        card_view:cardElevation="1dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/OfferProductImage"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/ricebag_sample" />
+
+            <RelativeLayout
+                android:id="@+id/relativeOfferDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_toRightOf="@+id/OfferProductImage"
+                android:orientation="vertical">
+
+                <com.thericebag.application.application.views.TextView_RobotoRegular
+                    android:id="@+id/txtOfferProductTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#696969"
+                    android:textSize="14dp" />
+
+                <!--<ImageView
+                    android:id="@+id/imgClose"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/txtOfferProductTitle"
+                    android:layout_alignParentRight="true"
+                    android:padding="3dp"
+                    android:src="@drawable/cart_delete_item" />-->
+
+                <com.thericebag.application.application.views.TextView_RobotoRegular
+                    android:id="@+id/txtOfferWeight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtOfferProductTitle"
+                    android:layout_marginTop="5dp"
+                    android:text="Weight: 15kgs"
+                    android:textColor="#8b8a8a"
+                    android:textSize="10dp" />
+
+                <View
+                    android:id="@+id/viewOfferLine1"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_below="@+id/txtOfferWeight"
+                    android:layout_marginTop="10dp"
+                    android:background="#eeeeee" />
+
+
+                <com.thericebag.application.application.views.TextView_RobotoBold
+                    android:id="@+id/txtOfferPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/viewOfferLine1"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="5dp"
+                    android:text="₹1000"
+                    android:textColor="#5cba5c"
+                    android:textSize="14dp" />
+
+                <com.thericebag.application.application.views.TextView_RobotoBold
+                    android:id="@+id/txtDiscount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/viewOfferLine1"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="5dp"
+                    android:text="Discount Product"
+                    android:textColor="#e67442"
+                    android:textSize="14dp" />
+
+
+            </RelativeLayout>
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>

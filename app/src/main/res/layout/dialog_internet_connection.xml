@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/linearDialogbg"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="#FFFFFF"
+        android:gravity="center"
+        android:padding="15dp">
+
+        <com.thericebag.application.application.views.TextView_RobotoMedium
+            android:id="@+id/connectionFailed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="Connection Failed"
+            android:textColor="#333333"
+            android:textSize="17dp" />
+
+        <com.thericebag.application.application.views.TextView_RobotoMedium
+            android:id="@+id/intenetText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/connectionFailed"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="15dp"
+            android:text="Please check your Internet\nconnection"
+            android:textColor="#333333"
+            android:textSize="13dp" />
+
+        <com.thericebag.application.application.views.TextView_RobotoMedium
+            android:id="@+id/exitApp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/intenetText"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/tryAgain"
+            android:padding="10dp"
+            android:text="Exit"
+            android:textColor="@color/colorPrimaryConfirmationUser" />
+
+        <com.thericebag.application.application.views.TextView_RobotoMedium
+            android:id="@+id/tryAgain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/intenetText"
+            android:padding="10dp"
+            android:text="Try Again"
+            android:textColor="@color/colorPrimaryConfirmationUser" />
+    </RelativeLayout>
+</RelativeLayout>

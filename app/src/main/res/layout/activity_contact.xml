@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_contact"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.thericebag.application.application.Activities.ContactActivity">
+
+    <RelativeLayout
+        android:id="@+id/relativeHeader"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/green">
+
+        <ImageView
+            android:id="@+id/backIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="?android:attr/selectableItemBackground"
+            android:padding="17dp"
+            android:src="@drawable/header_back_arrow" />
+
+        <com.thericebag.application.application.views.TextView_RobotoRegular
+            android:id="@+id/txtHeading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/imgCall"
+            android:layout_toRightOf="@+id/backIcon"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="Contact Us"
+            android:textColor="@color/white"
+            android:textSize="18dp" />
+
+        <View
+            android:id="@+id/viewHeader"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="#A9A9A9" />
+    </RelativeLayout>
+
+    <WebView
+        android:id="@+id/webContactUs"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/relativeHeader"></WebView>
+
+</RelativeLayout>

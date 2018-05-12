@@ -1,0 +1,189 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="6dp"
+        android:layout_marginRight="6dp"
+        android:layout_marginTop="10dp"
+        android:foreground="?android:attr/selectableItemBackground"
+        card_view:cardElevation="3dp">
+
+        <RelativeLayout
+            android:id="@+id/relativeMyOrder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView_yourOrders"
+            android:background="@drawable/layout_border_card"
+            android:padding="1dp">
+
+            <RelativeLayout
+                android:id="@+id/relativeOrderNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fbfbfb"
+                android:padding="5dp">
+
+                <com.thericebag.application.application.views.TextView_RobotoRegular
+                    android:id="@+id/txtOrder"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Order No:"
+                    android:textColor="#919191"
+                    android:textSize="12dp" />
+
+                <com.thericebag.application.application.views.TextView_RobotoMedium
+                    android:id="@+id/txtOrderNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/txtOrder"
+                    android:text="35421567"
+                    android:textColor="#696969"
+                    android:textSize="12dp" />
+
+                <com.thericebag.application.application.views.TextView_RobotoRegular
+                    android:id="@+id/txtOrderDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtOrder"
+                    android:layout_marginTop="3dp"
+                    android:drawableLeft="@drawable/calendar_icon"
+                    android:drawablePadding="8dp"
+                    android:text="10th Dec, 2015"
+                    android:textColor="#b9b9b9"
+                    android:textSize="11dp" />
+
+
+                <com.thericebag.application.application.views.TextView_RobotoMedium
+                    android:id="@+id/txtStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:text="DELIVERED"
+                    android:textColor="#e67442"
+                    android:textSize="12dp" />
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:id="@+id/linearProductDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/relativeOrderNumber"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <RelativeLayout
+                    android:id="@+id/relativeImage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/cart_item_image_border"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:id="@+id/capturedImage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ricebag_yourorders" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/relativeDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:orientation="vertical">
+
+                    <com.thericebag.application.application.views.TextView_RobotoRegular
+                        android:id="@+id/txtProductTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Kurnool Sona 1year old"
+                        android:textColor="#696969"
+                        android:textSize="14dp" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp">
+
+                        <com.thericebag.application.application.views.TextView_RobotoBold
+                            android:id="@+id/txtPurchasePrice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginTop="5dp"
+                            android:text="₹ 1200"
+                            android:textColor="#5cba5c"
+                            android:textSize="14dp" />
+
+                        <com.thericebag.application.application.views.TextView_RobotoRegular
+                            android:id="@+id/textQty"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="5dp"
+                            android:text="25kg"
+                            android:textColor="#8b8a8a"
+                            android:textSize="11dp" />
+
+                        <com.thericebag.application.application.views.TextView_RobotoRegular
+                            android:id="@+id/textQtytext"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="5dp"
+                            android:layout_toLeftOf="@+id/textQty"
+                            android:text="Qty:"
+                            android:textColor="#606060"
+                            android:textSize="11dp" />
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginTop="10dp"
+                        android:background="#dddddd" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp">
+
+                        <com.thericebag.application.application.views.TextView_RobotoRegular
+                            android:id="@+id/txtOurPrice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="Payment Type"
+                            android:textColor="#8b8a8a"
+                            android:textSize="11dp" />
+
+                        <com.thericebag.application.application.views.TextView_RobotoRegular
+                            android:id="@+id/txtCardType"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:text="Cash on Delivery"
+                            android:textColor="#5e5e5e"
+                            android:textSize="11dp" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+</RelativeLayout>

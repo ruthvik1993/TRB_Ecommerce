@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/relativeOrders"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/ripple"
+    android:padding="10dp">
+
+    <ImageView
+        android:id="@+id/img_yourorders"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_centerVertical="true"
+        android:src="@drawable/navigation_product_specific" />
+
+    <com.thericebag.application.application.views.TextView_RobotoRegular
+        android:id="@+id/txtProducts"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@+id/img_yourorders"
+        android:text="Kurnool Sona"
+        android:textSize="15dp" />
+
+</RelativeLayout>

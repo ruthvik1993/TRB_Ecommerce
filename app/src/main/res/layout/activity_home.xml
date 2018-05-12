@@ -1,0 +1,345 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:scrollbars="none">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/relativeHeader"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/green">
+
+            <ImageView
+                android:id="@+id/menuIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="?android:attr/selectableItemBackground"
+                android:padding="15dp"
+                android:src="@drawable/menu_icon" />
+
+            <com.thericebag.application.application.views.TextView_RobotoRegular
+                android:id="@+id/txtHome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/menuIcon"
+                android:text="Home"
+                android:textColor="@color/white"
+                android:textSize="16dp" />
+
+            <ImageView
+                android:id="@+id/imgCall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/imgKart"
+                android:background="?android:attr/selectableItemBackground"
+                android:padding="10dp"
+                android:src="@drawable/header_phone_white" />
+
+            <ImageView
+                android:id="@+id/imgKart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:padding="10dp"
+                android:src="@drawable/kart_icon" />
+
+            <View
+                android:id="@+id/viewHeader"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentBottom="true"
+                android:background="#A9A9A9" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/relativeHeader"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="195dp">
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/pager"
+                    android:layout_width="match_parent"
+                    android:layout_height="195dp"
+                    android:background="@color/dim_foreground_disabled_material_dark"></android.support.v4.view.ViewPager>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/home_viewpager_bg"
+                    android:tint="#323232"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:id="@+id/linearDots"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="5dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/imgDot1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/dot_filled" />
+
+                    <ImageView
+                        android:id="@+id/imgDot2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="7dp"
+                        android:src="@drawable/dot_notfilled" />
+
+                    <ImageView
+                        android:id="@+id/imgDot3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="7dp"
+                        android:src="@drawable/dot_notfilled" />
+
+                    <ImageView
+                        android:id="@+id/imgDot4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="7dp"
+                        android:src="@drawable/dot_notfilled" />
+
+                    <ImageView
+                        android:id="@+id/imgDot5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="7dp"
+                        android:src="@drawable/dot_notfilled" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#F4F4F4"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:padding="5dp">
+
+                    <com.thericebag.application.application.views.TextView_RobotoBold
+                        android:id="@+id/txtBestSellers"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:text="Our Best Sellers"
+                        android:textColor="#656565"
+                        android:textSize="12dp" />
+
+                    <com.thericebag.application.application.views.TextView_RobotoRegular
+                        android:id="@+id/txtShowAll"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginTop="2dp"
+                        android:text="Show All"
+                        android:textColor="#b3b3b3"
+                        android:visibility="invisible" />
+
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/viewBestSellers"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_below="@+id/txtTime"
+                    android:background="#a9a9a9" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="170dp"
+                    android:layout_below="@+id/viewBestSellers">
+
+                    <ProgressBar
+                        android:id="@+id/rbProprogressBar"
+                        style="?android:attr/progressBarStyleLarge"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:progressDrawable="@drawable/circular_progress_bar" />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recyclerBestSellers"
+                        android:layout_width="match_parent"
+                        android:layout_height="170dp"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearAllProducts"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#F4F4F4"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp">
+
+                        <com.thericebag.application.application.views.TextView_RobotoBold
+                            android:id="@+id/txtAllProducts"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="5dp"
+                            android:text="All Products"
+                            android:textColor="#656565"
+                            android:textSize="12dp" />
+
+                        <com.thericebag.application.application.views.TextView_RobotoRegular
+                            android:id="@+id/txtShowAllProducts"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="5dp"
+                            android:background="?android:attr/selectableItemBackground"
+                            android:focusableInTouchMode="true"
+                            android:padding="5dp"
+                            android:text="Show All"
+                            android:textColor="#b3b3b3"
+                            android:textSize="11dp" />
+
+
+                    </RelativeLayout>
+
+                    <View
+                        android:id="@+id/viewAllProducts"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_below="@+id/txtTime"
+                        android:layout_marginBottom="5dp"
+                        android:background="#a9a9a9" />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recyclerAllProducts"
+                        android:layout_width="match_parent"
+                        android:layout_height="170dp"
+                        android:layout_below="@+id/viewAllProducts"
+                        android:orientation="horizontal" />
+                </LinearLayout>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/card_view_specialities"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/white"
+                    android:focusableInTouchMode="true">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:padding="10dp">
+
+                        <View
+                            android:id="@+id/viewCenter"
+                            android:layout_width="1dp"
+                            android:layout_height="1dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp" />
+
+                        <com.thericebag.application.application.views.TextView_RobotoMedium
+                            android:id="@+id/textFreeHD"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_toLeftOf="@+id/viewCenter"
+                            android:background="@drawable/radiobutton_weight_unselected"
+                            android:drawableLeft="@drawable/free_home_delivery"
+                            android:drawablePadding="10dp"
+                            android:padding="10dp"
+                            android:text="Free home delivery"
+                            android:textAllCaps="true"
+                            android:textSize="10dp" />
+
+                        <com.thericebag.application.application.views.TextView_RobotoMedium
+                            android:id="@+id/textCOD"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_toRightOf="@+id/viewCenter"
+                            android:background="@drawable/radiobutton_weight_unselected"
+                            android:drawableLeft="@drawable/cash_on_delivery"
+                            android:drawablePadding="10dp"
+                            android:padding="10dp"
+                            android:text="cash on delivery"
+                            android:textAllCaps="true"
+                            android:textSize="10dp" />
+
+                        <com.thericebag.application.application.views.TextView_RobotoMedium
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignLeft="@+id/textFreeHD"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignRight="@+id/textFreeHD"
+                            android:layout_below="@+id/textFreeHD"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/radiobutton_weight_unselected"
+                            android:drawableLeft="@drawable/timed_delivery"
+                            android:drawablePadding="10dp"
+                            android:padding="10dp"
+                            android:text="Timed Delivery"
+                            android:textAllCaps="true"
+                            android:textSize="10dp" />
+
+                        <com.thericebag.application.application.views.TextView_RobotoMedium
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignLeft="@+id/textCOD"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignRight="@+id/textCOD"
+                            android:layout_below="@+id/textFreeHD"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/radiobutton_weight_unselected"
+                            android:drawableLeft="@drawable/quality_assured"
+                            android:drawablePadding="10dp"
+                            android:padding="10dp"
+                            android:text="Quality Assured"
+                            android:textAllCaps="true"
+                            android:textSize="10dp" />
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</ScrollView>

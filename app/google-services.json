@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "870797619231",
+    "firebase_url": "https://therb-9dc42.firebaseio.com",
+    "project_id": "therb-9dc42",
+    "storage_bucket": "therb-9dc42.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:870797619231:android:2e9ea5c3a40d57f3",
+        "android_client_info": {
+          "package_name": "com.thericebag.application"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "870797619231-7uuishqg9ron3rvcqa2m7fpuv2knfvbq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.thericebag.application",
+            "certificate_hash": "61e92189af23ef1f129e248eaa4de96590647365"
+          }
+        },
+        {
+          "client_id": "870797619231-obch5vuub0qjmnenbtqkqsiripf227lh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBo1cmFKVqxW8rm1cVoGhdM_jmv00usyDc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "870797619231-obch5vuub0qjmnenbtqkqsiripf227lh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

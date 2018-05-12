@@ -1,0 +1,133 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/relativeHeader"
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:background="#5cba5c">
+
+        <ImageView
+            android:id="@+id/backIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:padding="12dp"
+            android:src="@drawable/header_back_arrow" />
+
+        <com.thericebag.application.application.views.TextView_RobotoRegular
+            android:id="@+id/txtOrderSummary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/backIcon"
+            android:text="Order Summary"
+            android:textColor="#ffffff"
+            android:textSize="16dp" />
+
+        <ImageView
+            android:id="@+id/imgCall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:padding="10dp"
+            android:src="@drawable/header_phone_white" />
+
+        <View
+            android:id="@+id/viewHeader"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="#A9A9A9" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeProducts"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relativeHeader"
+        android:visibility="gone">
+
+        <ListView
+            android:id="@+id/listViewCheckOutProducts"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#f4f4f4"
+            android:cacheColorHint="@android:color/transparent"
+            android:listSelector="@android:color/transparent" />
+
+
+        <com.thericebag.application.application.views.TextView_RobotoMedium
+            android:id="@+id/txtContinue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/ripple_green"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="Continue to Pay Rs.1040"
+            android:textColor="#FFFFFF"
+            android:textSize="18.5dp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeNoProducts"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/relativeHeader"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/txtNothing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Nothing here"
+            android:textColor="#000000"
+            android:textSize="18dp" />
+
+        <ImageView
+            android:id="@+id/imgEmptyCart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtNothing"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/empty_cart" />
+
+        <TextView
+            android:id="@+id/txtcheckOut"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imgEmptyCart"
+            android:layout_marginTop="25dp"
+            android:gravity="center_horizontal"
+            android:text="Checkout great products and offers"
+            android:textColor="#666666"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/txtStartShopping"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtcheckOut"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/ripple_green"
+            android:padding="10dp"
+            android:text="Start Shopping"
+            android:textColor="#FFFFFF" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

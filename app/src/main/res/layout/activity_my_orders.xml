@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#e9eaed"
+    tools:context="com.thericebag.application.application.Activities.MyOrdersActivity">
+
+    <RelativeLayout
+        android:id="@+id/relativeHeader"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/green">
+
+        <ImageView
+            android:id="@+id/backIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="?android:attr/selectableItemBackground"
+            android:padding="15dp"
+            android:src="@drawable/header_back_arrow" />
+
+        <com.thericebag.application.application.views.TextView_RobotoRegular
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/backIcon"
+            android:text="My Orders"
+            android:textColor="@color/white"
+            android:textSize="16dp" />
+
+        <ImageView
+            android:id="@+id/imgCall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/imgKart"
+            android:background="?android:attr/selectableItemBackground"
+            android:padding="10dp"
+            android:src="@drawable/header_phone_white" />
+
+        <ImageView
+            android:id="@+id/imgKart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:padding="10dp"
+            android:src="@drawable/kart_icon" />
+
+        <View
+            android:id="@+id/viewHeader"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="#A9A9A9" />
+    </RelativeLayout>
+
+    <com.thericebag.application.application.views.TextView_RobotoRegular
+        android:id="@+id/txtNoOrders"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="You haven't placed any orders yet"
+        android:visibility="gone" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerMyOrders"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relativeHeader"
+        android:visibility="visible" />
+
+</RelativeLayout>

@@ -1,0 +1,129 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#FFFFFF"
+    android:baselineAligned="false"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/relativeOrders"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ripple"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/img_yourorders"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/navigation_your_orders" />
+
+        <com.thericebag.application.application.views.TextView_RobotoRegular
+            android:id="@+id/yourOrders"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@+id/img_yourorders"
+            android:text="Your Orders"
+            android:textSize="15dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ripple"
+        android:padding="10dp"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/img_offers"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/navigation_offers" />
+
+        <com.thericebag.application.application.views.TextView_RobotoRegular
+            android:id="@+id/offers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@+id/img_offers"
+            android:text="Offers"
+            android:textSize="15dp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ripple"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/img_contactUs"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/navigation_contact_us" />
+
+        <com.thericebag.application.application.views.TextView_RobotoRegular
+            android:id="@+id/contactUs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@+id/img_contactUs"
+            android:text="Contact Us"
+            android:textSize="15dp" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relaiveLogout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ripple"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/imgLogout"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/logout" />
+
+        <com.thericebag.application.application.views.TextView_RobotoRegular
+            android:id="@+id/txtLogOut"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@+id/imgLogout"
+            android:text="LogOut"
+            android:textSize="15dp" />
+
+
+    </RelativeLayout>
+
+    <com.thericebag.application.application.views.TextView_RobotoMedium
+        android:id="@+id/texteditProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bg_round_yellow"
+        android:paddingBottom="5dp"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:paddingTop="5dp"
+        android:text="Edit Profile"
+        android:textColor="@color/white"
+        android:textSize="15dp" />
+
+</LinearLayout>

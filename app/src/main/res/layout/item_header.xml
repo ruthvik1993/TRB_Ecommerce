@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#f4f4f4"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/relativeOrder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp">
+
+        <TextView
+            android:id="@+id/txtOrder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Order  "
+            android:textColor="#919191"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/txtOrderID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/txtOrder"
+            android:text="#2016030405"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/imgCalendar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/txtOrder"
+            android:layout_below="@+id/txtOrder"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/calendar_icon" />
+
+        <TextView
+            android:id="@+id/txtOrderDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/imgCalendar"
+            android:layout_alignTop="@+id/imgCalendar"
+            android:layout_below="@+id/txtOrder"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@+id/imgCalendar"
+            android:text="26/04/2016"
+            android:textSize="12dp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relativeOrder"
+        android:layout_marginBottom="10dp"
+        android:background="#FFFFFF"
+        android:padding="15dp">
+
+        <TextView
+            android:id="@+id/txtPayment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Payment Type"
+            android:textSize="12dp" />
+
+        <TextView
+            android:id="@+id/txtPaymentType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtPayment"
+            android:layout_marginTop="10dp"
+            android:text="Cash On Delivery"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/txtAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="₹"
+            android:textSize="22dp" />
+
+    </RelativeLayout>
+</RelativeLayout>

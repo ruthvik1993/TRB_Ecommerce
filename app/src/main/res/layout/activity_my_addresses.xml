@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#e9eaed"
+    tools:context="com.thericebag.application.application.Activities.MyOrdersActivity">
+
+    <RelativeLayout
+        android:id="@+id/relativeHeader"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/green">
+
+        <ImageView
+            android:id="@+id/backIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="?android:attr/selectableItemBackground"
+            android:padding="15dp"
+            android:src="@drawable/header_back_arrow" />
+
+        <com.thericebag.application.application.views.TextView_RobotoRegular
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/backIcon"
+            android:text="My Address"
+            android:textColor="@color/white"
+            android:textSize="16dp" />
+
+        <ImageView
+            android:id="@+id/imgCall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/imgKart"
+            android:background="?android:attr/selectableItemBackground"
+            android:padding="10dp"
+            android:src="@drawable/header_phone_white" />
+
+        <ImageView
+            android:id="@+id/imgKart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:padding="10dp"
+            android:src="@drawable/kart_icon" />
+
+        <View
+            android:id="@+id/viewHeader"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="#A9A9A9" />
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerMyAddresses"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relativeHeader"
+        android:layout_marginBottom="10dp"
+        android:background="#e9eaed" />
+
+    <RelativeLayout
+        android:id="@+id/relativeAddAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/recyclerMyAddresses"
+        android:layout_marginTop="15dp"
+        android:gravity="center_horizontal"
+        android:padding="10dp"
+        android:visibility="invisible">
+
+        <ImageView
+            android:id="@+id/imgAdd"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/plus_icon_address" />
+
+        <TextView
+            android:id="@+id/txtAddText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imgAdd"
+            android:layout_centerHorizontal="true"
+            android:text="Add address"
+            android:textColor="#666666" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/linearExpectedTime"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/layout_notrounded">
+
+        <RadioGroup
+            android:id="@+id/radioDate"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_alignParentTop="true"
+            android:orientation="horizontal">
+
+            <com.thericebag.application.application.views.RadioButton_RobotoMedium
+                android:id="@+id/radioDay1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/layout_notrounded"
+                android:button="@null"
+                android:checked="true"
+                android:gravity="center"
+                android:text="Today"
+                android:textColor="#a9a9a9" />
+
+            <com.thericebag.application.application.views.RadioButton_RobotoMedium
+                android:id="@+id/radioDay2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/layout_notrounded"
+                android:button="@null"
+                android:gravity="center"
+                android:text="Tomorrow"
+                android:textColor="#a9a9a9" />
+        </RadioGroup>
+
+        <RadioGroup
+            android:id="@+id/radioGroupTimeSlot"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_below="@+id/radioDate"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal">
+
+            <com.thericebag.application.application.views.RadioButton_RobotoRegular
+                android:id="@+id/radioTime1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/layout_round_corners_border"
+                android:button="@null"
+                android:gravity="center"
+                android:text="9:00AM - 02:00PM"
+                android:textColor="#bfbfbf" />
+
+            <com.thericebag.application.application.views.RadioButton_RobotoRegular
+                android:id="@+id/radioTime2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/layout_round_corners_border"
+                android:button="@null"
+                android:gravity="center"
+                android:text="02:00PM - 08:00PM"
+                android:textColor="#bfbfbf" />
+
+        </RadioGroup>
+    </RelativeLayout>
+</RelativeLayout>

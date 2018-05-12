@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f4f4f4"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.thericebag.application.application.Activities.ConfirmationToUserActivity"
+    tools:showIn="@layout/confirmationtouser_layout">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="135dp"
+        android:layout_alignParentBottom="true"
+        android:background="#FFFFFF"
+        android:padding="5dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/txtTotal"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="5dp"
+            android:padding="5dp"
+            android:text="Shipping Charges"
+            android:textColor="#727272"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/txtDeliveryAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/txtTotal"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="5dp"
+            android:padding="5dp"
+            android:text="₹ 0"
+            android:textColor="#5cba5c"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/txtTotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/txtContinue"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="5dp"
+            android:padding="5dp"
+            android:text="Total Amount"
+            android:textColor="#727272"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/txtTotalAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/txtContinue"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="5dp"
+            android:padding="5dp"
+            android:text="₹ 1200"
+            android:textColor="#5cba5c"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/txtContinue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="#e67442"
+            android:clickable="true"
+            android:focusableInTouchMode="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="Continue Shopping"
+            android:textColor="#FFFFFF"
+            android:textSize="16dp" />
+    </RelativeLayout>
+
+</RelativeLayout>

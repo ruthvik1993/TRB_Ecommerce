@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/relativeLogin"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ScrollView
+        android:id="@+id/scrollLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/login_background">
+
+            <RelativeLayout
+                android:id="@+id/relativeTillTabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                android:id="@+id/imgLogo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="45dp"
+                android:src="@drawable/ricebag_logo" />
+
+            <android.support.design.widget.TabLayout
+                android:id="@+id/tabsHeaading"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_below="@+id/imgLogo"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:layout_marginTop="15dp"
+                android:background="#fafafa"
+                app:tabIndicatorColor="#666666"
+                app:tabIndicatorHeight="0.5dp"
+                app:tabSelectedTextColor="#666666"
+                app:tabTextColor="#8d8d8d" />
+            </RelativeLayout>
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/viewpagerLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/relativeTillTabs"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp" />
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/relativeMain"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/relative_yourAddresses"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/txtDone"
+        android:layout_below="@+id/relative_Orders"
+        android:background="@color/white">
+
+        <RelativeLayout
+            android:id="@+id/relativeAddressHeader"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="7dp"
+            android:background="#fcfcfc">
+
+            <com.thericebag.application.application.views.TextView_RobotoMedium
+                android:id="@+id/textView_yourAddresses"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:padding="10dp"
+                android:text="Select Your Delivery Address"
+                android:textColor="#505050"
+                android:textSize="15dp" />
+
+            <ImageView
+                android:id="@+id/imgEditAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/ripple"
+                android:clickable="true"
+                android:padding="10dp"
+                android:src="@drawable/edit_icon" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.25dp"
+                android:layout_alignParentBottom="true"
+                android:background="#d6d6d6" />
+        </RelativeLayout>
+
+        <ListView
+            android:id="@+id/listView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/relativeAddressHeader"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:divider="@null"
+            android:dividerHeight="2dp"
+            android:scrollbars="none" />
+
+        <RelativeLayout
+            android:id="@+id/relativeAddAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/listView"
+            android:gravity="center_horizontal"
+            android:padding="10dp"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/imgAdd"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/plus_icon_address" />
+
+            <TextView
+                android:id="@+id/txtAddText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imgAdd"
+                android:layout_centerHorizontal="true"
+                android:text="Add address"
+                android:textColor="#666666" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/txtDone"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/ripple_green"
+        android:gravity="center"
+        android:padding="8dp"
+        android:text="DONE"
+        android:textColor="@color/white"
+        android:textSize="16dp" />
+
+</RelativeLayout>
